@@ -10,14 +10,14 @@ const initialState = {
     isFetching: false
 };
 
-function reducer(state = initialState, action){
+export const rootReducer = (state = initialState, action) => {
     console.log('reducer', action);
     switch (action.type){
         case FETCH_MUSIC_START:
             return {
                 ...state, 
                 isFetching: true,
-                error: ''
+                music: []
             };
         case FETCH_MUSIC_SUCCESS:
             return {
@@ -36,4 +36,3 @@ function reducer(state = initialState, action){
     }
 }
 
-export default reducer;

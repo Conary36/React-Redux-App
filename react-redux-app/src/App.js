@@ -1,8 +1,8 @@
 import React from 'react';
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import reducer from './reducers/reducer';
-import MusicList from './components/MusicList'
+import {rootReducer as reducer} from './reducers/reducer';
+import MusicList from './components/MusicList';
 import { Provider } from "react-redux";
 
 const store = createStore(reducer, applyMiddleware(thunk));
